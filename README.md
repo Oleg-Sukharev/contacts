@@ -1,3 +1,6 @@
+Simple contact Page
+# React + react-icons + react-hook-form + yup
+
 ### Install packages
 
 ```shell
