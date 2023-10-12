@@ -1,0 +1,21 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "order/properties-order": [
+      "display",
+      "align-items",
+      "justify-content",
+      "flex-direction",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index"
+    ],
+    "selector-class-pattern": null
+  }
+}
