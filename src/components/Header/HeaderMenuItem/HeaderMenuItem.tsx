@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
 
 import { FiChevronDown } from "react-icons/fi";
-import styles from './HeaderMenuItem.module.scss';
+import classes from './HeaderMenuItem.module.scss';
 
 interface HeaderLink {
   text: string;
@@ -34,9 +34,9 @@ export const HeaderMenuItem = ({ link }: { link: HeaderLink }) => {
 
   if (!submenu) {
     return (
-      <li className={styles.item}>
+      <li className={classes.item}>
         <NavLink to={url}
-          className={({ isActive }) => (isActive ? `${styles.link} ${styles.active}` : `${styles.link} `)}
+          className={({ isActive }) => (isActive ? `${classes.link} ${classes.active}` : `${classes.link} `)}
         >
           {text}
         </NavLink>
@@ -45,23 +45,23 @@ export const HeaderMenuItem = ({ link }: { link: HeaderLink }) => {
   }
 
   return (
-    <li className={styles.item}>
+    <li className={classes.item}>
       <button
         ref={menuRef}
         onClick={() => setIsMenuOpen((prev) => !prev)}
-        className={styles.link}
+        className={classes.link}
       >
         {text}
-        <span className={`${styles.arrow} ${isMenuOpen ? styles.active : ''}`} >
+        <span className={`${classes.arrow} ${isMenuOpen ? classes.active : ''}`} >
           <FiChevronDown size={20} />
         </span>
       </button>
 
       {isMenuOpen && (
-        <ul className={styles.submenu}>
+        <ul className={classes.submenu}>
           {link.submenu?.map(({ text, url }) => (
             <li key={text}>
-              <Link to={url} className={styles.link}>
+              <Link to={url} className={classes.link}>
                 {text}
               </Link>
             </li>
