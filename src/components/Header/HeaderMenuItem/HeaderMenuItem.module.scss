@@ -1,0 +1,74 @@
+@import "@/styles/core/core";
+
+.item {
+    position: relative;
+}
+
+.link {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: $font-roboto;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include mq("tablet-wide") {
+        font-size: 16px;
+        color: $brand-dark-2;
+    }
+
+    &.active {
+        font-weight: 600;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:focus-visible {
+        outline: 1px solid currentcolor;
+    }
+}
+
+.submenu {
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+
+    @include mq("tablet-wide") {
+        position: absolute;
+        top: 100%;
+        left: 5px;
+        z-index: 50;
+        padding: 10px;
+        transition: box-shadow 0.2s ease-in-out;
+        box-shadow: 0 3px 6px 0 rgb(0 0 0 / 40%);
+        background: $brand-gray-4;
+        font-size: 14px;
+        max-width: 300px;
+        width: max-content;
+    }
+
+    .link {
+        @include mq("tablet-wide") {
+            font-size: 14px;
+        }
+    }
+}
+
+.arrow {
+    margin-left: 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    top: 3px;
+
+    &.active {
+        transform: rotate(180deg);
+        top: -3px;
+    }
+}
