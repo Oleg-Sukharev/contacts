@@ -1,0 +1,27 @@
+@import "@/styles/core/core";
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    background-color: $black;
+    border: 1px solid $black;
+    transition: all 0.3s;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+
+    @include mq("tablet-wide") {
+        font-size: 16px;
+        padding: 17px 30px;
+    }
+
+    &:focus-visible,
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}

@@ -24,13 +24,11 @@
     margin-top: 20px;
     padding-top: 30px;
     gap: 30px;
-
-    @include mq("tablet-small") {
-        justify-content: space-between;
-    }
+    justify-content: space-between;
 
     @include mq("tablet-wide") {
-        justify-content: space-evenly;
+        padding-top: 20px;
+        justify-content: space-between;
         padding-left: 20px;
     }
 }
@@ -50,6 +48,10 @@
 .linksColumn {
     display: flex;
     flex-direction: column;
+
+    &:not(.form) {
+        margin-top: 15px;
+    }
 }
 
 .list {
@@ -84,5 +86,17 @@
     &:focus-visible,
     &:hover {
         color: $brand-gray-2;
+    }
+}
+
+.form {
+    align-self: flex-start;
+    background: $brand-dark-6;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+
+    @include mq("phablet") {
+        max-width: 305px;
     }
 }

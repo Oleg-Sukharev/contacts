@@ -2,7 +2,8 @@ import ContactList from '@/components/ContactList/ContactList'
 import Container from "@/components/Container/Container"
 import { FOOTER_MENU } from "@/constants/constants"
 import Logo from "@/assets/logo.svg?react"
-import classes from "./footer.module.scss";
+import SubscribeForm from "./SubscribeForm/SubscribeForm"
+import classes from "./footer.module.scss"
 
 interface Column {
   title: string;
@@ -43,9 +44,14 @@ const Footer = () => {
           {FOOTER_MENU.map((menu, index) => (
             <LinkList key={index} title={menu.title} links={menu.links} />
           ))}
+
+          <div className={`${classes.linksColumn} ${classes.form}`}>
+            <h3 className={classes.subtitle}>Join Our Newsletter</h3>
+            <SubscribeForm />
+          </div>
         </div>
       </Container>
-    </footer>
+    </footer >
   );
 };
 
