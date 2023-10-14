@@ -23,6 +23,7 @@
     font-size: 11px;
     line-height: 1.5;
     max-width: 220px;
+    gap: 10px;
 
     @include mq("tablet-wide") {
         justify-content: flex-start;

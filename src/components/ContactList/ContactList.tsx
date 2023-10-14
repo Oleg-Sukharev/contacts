@@ -8,7 +8,7 @@ interface SocialsProps {
   className?: string;
 };
 
-const ContactList: React.FC<SocialsProps> = ({ className }) => {
+const ContactList: React.FC<SocialsProps> = ({ className = "" }) => {
   const { phone, email, address } = CONTACTS;
 
   return (
