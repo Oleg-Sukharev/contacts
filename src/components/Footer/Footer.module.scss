@@ -1,0 +1,88 @@
+@import "@/styles/core/core";
+
+.footer {
+    color: $white;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    background: $black;
+
+    @include mq("tablet-wide") {
+        padding-top: 80px;
+        padding-bottom: 65px;
+    }
+}
+
+.logo {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid $brand-gray-4;
+    margin-top: 20px;
+    padding-top: 30px;
+    gap: 30px;
+
+    @include mq("tablet-small") {
+        justify-content: space-between;
+    }
+
+    @include mq("tablet-wide") {
+        justify-content: space-evenly;
+        padding-left: 20px;
+    }
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    @include mq("tablet-wide") {
+        font-size: 18px;
+    }
+}
+
+.linksColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mq("tablet-wide") {
+        gap: 25px;
+    }
+
+    @media (max-width: map-get($breakpoints, "tablet-wide")) {
+        a,
+        li {
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+        }
+    }
+}
+
+.link {
+    outline: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 12px;
+
+    @include mq("tablet-wide") {
+        font-size: 16px;
+    }
+
+    &:focus-visible,
+    &:hover {
+        color: $brand-gray-2;
+    }
+}

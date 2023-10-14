@@ -40,3 +40,35 @@ export const SOCIALS = {
     discord: "discord",
     instagram: "instagram",
 };
+
+export const FOOTER_MENU = [
+    {
+        title: "Company",
+        links: [
+            { title: "About", link: "" },
+            { title: "Contact", link: "" },
+            { title: "Blogs", link: "" },
+            { title: "MockLink1", link: "" },
+            { title: "MockLink2", link: "" },
+        ],
+    },
+    {
+        title: "Legal",
+        links: [
+            { title: "Privacy Policy", link: "" },
+            { title: "Terms & Services", link: "" },
+            { title: "Terms of Use", link: "" },
+            { title: "Refund Policy", link: "" },
+            { title: "MockLink3", link: "" },
+        ],
+    },
+    {
+        title: "Quick Links",
+        links: [
+            { title: "Techlabz Keybox", link: "" },
+            { title: "Downloads", link: "" },
+            { title: "Forum", link: "" },
+            { title: "MockLink4", link: "" },
+        ],
+    },
+];
