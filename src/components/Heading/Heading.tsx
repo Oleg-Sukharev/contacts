@@ -7,7 +7,7 @@ interface HeadingProps {
   className?: string;
 }
 
-const Heading = ({ children, title, center = true, className }: PropsWithChildren<HeadingProps>) => {
+const Heading = ({ children, title, center = true, className = "" }: PropsWithChildren<HeadingProps>) => {
   return (
     <div className={`${center ? classes.center : ""} ${className}`}>
       {title && <h1 className={classes.title}>{title}</h1>}

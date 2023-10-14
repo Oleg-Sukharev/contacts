@@ -21,7 +21,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, label, icon }) => (
   </li>
 );
 
-const Socials: React.FC<SocialsProps> = ({ className }) => {
+const Socials: React.FC<SocialsProps> = ({ className = "" }) => {
   return (
     <ul className={`${classes.list} ${className}`}>
       <SocialLink href={SOCIALS.twitter} label="Twitter" icon={<BiLogoTwitter size={20} />} />
