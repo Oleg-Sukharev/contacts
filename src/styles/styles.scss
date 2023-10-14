@@ -1,4 +1,32 @@
-@import url("normalize.css");
-
-@import "core/core.scss";
+@import "normalize.css";
+@import "core/core";
 @import "common";
+
+body {
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: $font-poppins, $font-fallback;
+    background-color: $brand-gray-4;
+    color: $brand-gray-1;
+
+    &.overflowHidden {
+        overflow: hidden;
+    }
+}
+
+#root {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+main {
+    flex: 1;
+}
+
+header,
+footer {
+    width: 100%;
+}

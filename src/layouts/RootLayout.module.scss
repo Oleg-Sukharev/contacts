@@ -1,0 +1,11 @@
+@import "@/styles/core/core";
+
+.main {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    @include mq("tablet-wide") {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+}
