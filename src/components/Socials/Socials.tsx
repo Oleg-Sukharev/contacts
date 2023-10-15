@@ -1,7 +1,7 @@
 import { BiLogoDiscordAlt, BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 
 import { SOCIALS } from "@/constants/constants"
-import classes from "./socials.module.scss";
+import classes from "./Socials.module.scss";
 
 interface SocialsProps {
   className?: string;
