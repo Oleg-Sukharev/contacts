@@ -19,7 +19,7 @@ const SubscribeForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<IFormFields> = (data) => {
+  const onSubmit: SubmitHandler<IFormFields> = () => {
     alert("Thank you for subscribing!");
     reset();
   };

@@ -27,7 +27,6 @@ const validationSchema = yup.object({
   message: yup.string().required('Message is required'),
 });
 
-
 // default properties to handle dirty state
 const defaultValues: FormValues = {
   name: '',
@@ -37,8 +36,6 @@ const defaultValues: FormValues = {
   subject: '',
   message: '',
 };
-
-
 
 const ContactForm = () => {
   const {
@@ -52,6 +49,7 @@ const ContactForm = () => {
   });
 
   const onSubmit: SubmitHandler<FormValues> = () => {
+    // could add local state to handle loading process  and add tostify to handle it 
     reset();
   };
 

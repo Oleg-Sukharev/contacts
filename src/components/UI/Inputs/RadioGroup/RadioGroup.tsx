@@ -1,16 +1,17 @@
-import React, { forwardRef } from 'react';
+import * as React from "react";
 
 import { BsCheck } from "react-icons/bs"
 import classes from './RadioGroup.module.scss';
+import { forwardRef } from 'react';
 
-interface InputProps extends React.HTMLProps<HTMLInputElement> {
+interface RadioGroupProps extends React.HTMLProps<HTMLInputElement> {
   label: string;
   values: Readonly<string[]>;
   error?: string;
   dirtyField?: boolean;
 }
 
-const RadioGroup = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+const RadioGroup = forwardRef<HTMLInputElement, RadioGroupProps>((props, ref) => {
   const { label, error, values, dirtyField, ...restProps } = props;
 
   return (
