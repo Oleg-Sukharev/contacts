@@ -2,7 +2,7 @@ import * as yup from 'yup';
 
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import Button from '@/components/Button/Button';
+import Button from '@/components/UI/Button/Button';
 import classes from './SubscribeForm.module.scss';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -20,7 +20,6 @@ const SubscribeForm = () => {
   });
 
   const onSubmit: SubmitHandler<IFormFields> = (data) => {
-    console.log(data, 'data');
     alert("Thank you for subscribing!");
     reset();
   };

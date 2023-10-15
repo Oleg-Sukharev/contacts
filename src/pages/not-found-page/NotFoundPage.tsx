@@ -1,14 +1,7 @@
-import { Link } from "react-router-dom"
+import EmptyState from '@/components/EmptyPage/EmptyPage';
 
-const NotFoundPage = function () {
-  return (
-    <>
-      <h1>
-        404 - Not Found
-      </h1>
-      <Link to="/">Go to home page</Link>
-    </>
-  )
+const NotFoundPage = () => {
+  return <EmptyState title="404 - Not Found" />
 }
 
 export default NotFoundPage;

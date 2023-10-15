@@ -1,0 +1,57 @@
+@import "@/styles/core/core";
+
+.wrapper {
+    position: relative;
+    padding: 25px 0;
+}
+
+.label {
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    line-height: 25px;
+    color: $brand-gray-2;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+
+    &.filled {
+        color: $black;
+    }
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black;
+    border: none;
+    border-bottom: 1px solid $brand-gray-2;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+        color: $black;
+        border-bottom: 1px solid $black;
+
+        & + .label {
+            color: $black;
+        }
+    }
+
+    &::placeholder {
+        color: $brand-gray-2;
+    }
+}
+
+.error {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    color: $error;
+}

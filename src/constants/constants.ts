@@ -72,3 +72,5 @@ export const FOOTER_MENU = [
         ],
     },
 ];
+
+export const SUBJECT_OPTIONS = ["General Inquiry", "General Inquiry", "General Inquiry", "General Inquiry"];

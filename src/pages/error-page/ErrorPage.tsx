@@ -1,11 +1,12 @@
+import EmptyState from '@/components/EmptyPage/EmptyPage';
 import { useRouteError } from "react-router-dom"
 
-const ErrorPage = function () {
+const ErrorPage = () => {
   const error = useRouteError()
 
   return (
     <>
-      <h1>Something went wrong</h1>
+      <EmptyState title="Something went wrong" />
       {import.meta.env.MODE !== "production" && error instanceof Error && (
         <>
           <pre>{error.message}</pre>

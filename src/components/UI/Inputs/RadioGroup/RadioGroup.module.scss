@@ -1,0 +1,88 @@
+@import "@/styles/core/core";
+
+.wrapper {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include mq("tablet-wide") {
+        gap: 20px;
+    }
+}
+
+.title {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: $brand-gray-2;
+    margin-bottom: 15px;
+
+    &.active {
+        color: $black;
+    }
+}
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+    cursor: pointer;
+    gap: 5px;
+
+    @include mq("tablet-wide") {
+        gap: 10px;
+    }
+}
+
+.checkbox {
+    height: 13px;
+    width: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $white;
+    background: $brand-gray-2;
+    margin-right: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    &:checked + label {
+        .icon {
+            opacity: 1;
+        }
+
+        .checkbox {
+            background: $black;
+        }
+    }
+
+    &:focus-visible + label {
+        color: $brand-gray-1;
+    }
+}
+
+.error {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    line-height: 25px;
+    color: $error;
+}

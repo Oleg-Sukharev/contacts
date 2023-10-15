@@ -1,9 +1,8 @@
+import { BiSolidPhoneCall } from "react-icons/bi";
 import { CONTACTS } from "@/constants/constants"
-import { FaLocationDot } from "react-icons/fa6";
-import { FaPhoneVolume } from "react-icons/fa6";
+import { HiLocationMarker } from "react-icons/hi";
 import { RiMailFill } from "react-icons/ri";
 import classes from "./ContactList.module.scss";
-
 interface SocialsProps {
   className?: string;
 };
@@ -20,7 +19,7 @@ const ContactList: React.FC<SocialsProps> = ({ className = "" }) => {
             href={`tel:${phone}`}
           >
             <span className={classes.icon}>
-              <FaPhoneVolume size={16} />
+              <BiSolidPhoneCall size={24} />
             </span>
             {phone}
           </a>
@@ -34,7 +33,7 @@ const ContactList: React.FC<SocialsProps> = ({ className = "" }) => {
             href={`mailto:${email}`}
           >
             <span className={classes.icon}>
-              <RiMailFill size={20} />
+              <RiMailFill size={22} />
             </span>
             {email}
           </a>
@@ -44,7 +43,7 @@ const ContactList: React.FC<SocialsProps> = ({ className = "" }) => {
       {address && (
         <li className={classes.item}>
           <span className={classes.icon}>
-            <FaLocationDot size={20} />
+            <HiLocationMarker size={22} />
           </span>
           {address}
         </li>

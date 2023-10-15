@@ -52,6 +52,22 @@
     &:not(.form) {
         margin-top: 15px;
     }
+
+    @include mq("phone-wide") {
+        min-width: 200px;
+    }
+
+    @include mq("tablet-wide") {
+        min-width: unset;
+    }
+
+    &:first-child {
+        max-width: 200px;
+
+        @include mq("phone-wide") {
+            min-width: unset;
+        }
+    }
 }
 
 .list {

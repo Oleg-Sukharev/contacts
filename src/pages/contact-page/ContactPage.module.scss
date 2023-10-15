@@ -1,0 +1,113 @@
+@import "@/styles/core/core";
+
+.description {
+    max-width: 200px;
+    margin: 0 auto;
+
+    @include mq("tablet-wide") {
+        max-width: unset;
+    }
+}
+
+.wrapper {
+    margin-top: 20px;
+    padding: 5px;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: $shadow-block;
+    gap: 30px;
+
+    @include mq("tablet-wide") {
+        display: flex;
+        padding: 10px;
+        margin-top: 65px;
+    }
+}
+
+.title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 7px;
+    text-align: center;
+    margin-top: 0;
+
+    @include mq("tablet-wide") {
+        font-size: 28px;
+        text-align: left;
+    }
+}
+
+.subtitle {
+    color: $brand-gray-5;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @include mq("tablet-wide") {
+        font-size: 18px;
+        text-align: left;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background: $black;
+    color: $white;
+    padding: 15px 15px 25px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include mq("tablet-wide") {
+        padding: 40px;
+        width: 40%;
+        max-width: 500px;
+        flex-shrink: 0;
+        justify-content: space-between;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        right: 25px;
+        bottom: 50px;
+        border-radius: 50%;
+        background: rgb(72 72 72 / 50%);
+        z-index: -1;
+
+        @include mq("tablet-wide") {
+            width: 140px;
+            height: 140px;
+            right: 70px;
+            bottom: 70px;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        right: -110px;
+        bottom: -90px;
+        border-radius: 50%;
+        z-index: -1;
+        background: $brand-dark-5;
+
+        @include mq("tablet-wide") {
+            width: 270px;
+            height: 270px;
+            right: -90px;
+            bottom: -85px;
+        }
+    }
+}
+
+.socials {
+    margin-top: 60px;
+}
