@@ -3,7 +3,7 @@ import Container from "@/components/Container/Container"
 import { FOOTER_MENU } from "@/constants/constants"
 import Logo from "@/assets/logo.svg?react"
 import SubscribeForm from "./SubscribeForm/SubscribeForm"
-import classes from "./footer.module.scss"
+import classes from "./Footer.module.scss"
 
 interface Column {
   title: string;
